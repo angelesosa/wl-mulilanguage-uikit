@@ -6,56 +6,53 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface MlFlag {
+        "defTxtSelect": string;
+        "default": string;
+        "flags": string;
+        "label": string;
+        "reset": () => Promise<void>;
+        "selectItem": (key: string) => Promise<void>;
+        "selectedItem": () => Promise<{
+            key: string;
+            text: string;
+            selected: boolean;
+            class: string;
+        }>;
+        "showAll": boolean;
+        "showTextDefault": boolean;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMlFlagElement extends Components.MlFlag, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMlFlagElement: {
+        prototype: HTMLMlFlagElement;
+        new (): HTMLMlFlagElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "ml-flag": HTMLMlFlagElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface MlFlag {
+        "defTxtSelect"?: string;
+        "default"?: string;
+        "flags"?: string;
+        "label"?: string;
+        "onClickflag"?: (event: CustomEvent<any>) => void;
+        "showAll"?: boolean;
+        "showTextDefault"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "ml-flag": MlFlag;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "ml-flag": LocalJSX.MlFlag & JSXBase.HTMLAttributes<HTMLMlFlagElement>;
         }
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -9,9 +10,24 @@
   <script nomodule src="/build/mlc-uikit.js"></script>
 
 </head>
+
 <body>
+  <br>
+  <ml-flag show-all="false" default="PER" text="Selecciona tu pais" label="Pais" show-text-default="true"></ml-flag>
+  <h1 onclick="bsdFlag.selectItem('PER')">Seleccionar a Peru con un click</h1>
+  <h1 onclick="bsdFlag.reset()">reset</h1>
+  <script>
+    const bsdFlag = document.querySelector('ml-flag');
+    bsdFlag.flags = [{key: 'PER', text: '+51'}, {key: 'COL'}];
+    bsdFlag.addEventListener('clickflag', event => { 
+      console.log('clickflag', event);
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
+      bsdFlag.selectedItem().then((result) => {
+        console.log('metodo publico', result); 
+      })
+       
+    })
+  </script>
 </body>
+
 </html>

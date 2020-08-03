@@ -1,0 +1,504 @@
+
+.flag-dropdown-container {
+  /* margin: 34px auto; */
+  width: 100%;
+  background-color: transparent;
+}
+
+.flag-dropdown {
+  position: relative;
+}
+
+.flag-dropdown-divider {
+  border-bottom: solid 1px #999;
+  margin-left: 10px;
+}
+
+.flag-dropdown-caption-label {
+  font-size: 11px;
+  padding: 0px 10px;
+}
+
+.flag-dropdown > .flag-dropdown-caption {
+  /* background-color: #f2f2f2; */
+  padding: 8px 15px 8px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 25px;
+}
+
+.flag-dropdown-caption:after {
+  display: inline-block;
+  margin-top: -2px;
+  vertical-align: middle;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto 10px 0px 0px;
+  border-top: 10px solid #a3a4a0;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.flag-dropdown > .flag-dropdown-list {
+  position: absolute;
+  background-color: #f2f2f2;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  display: none;
+}
+
+.flag-dropdown > .flag-dropdown-list > .flag-dropdown-item {
+  padding: 0px 0px 0px 15px;
+  cursor: pointer;
+  line-height: 25px;
+  font-size: 14px;
+  /* color: #555b6a; */
+}
+
+.flag-dropdown> .flag-dropdown-list > .flag-dropdown-item.selected {
+  font-weight: bold;
+}
+
+.flag-dropdown > .flag-dropdown-caption:hover,
+.flag-dropdown > .flag-dropdown-list > .flag-dropdown-item:hover {
+  background-color: rgb(83, 161, 214);
+  color: #fff;
+}
+
+.flag-dropdown.open > .flag-dropdown-list {
+  display: block;
+}
+
+.flag-dropdown-img:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  margin-left: -5px;
+  margin-right: 5px;
+  background-image: url('./assets/flags.png');
+  background-repeat: no-repeat;
+  background-size: 408px 384px;
+  background-position: 0 -24px;
+}
+
+.flag-dropdown-img.flag-unknown:before {
+  background-position: 0 -24px;
+}
+
+.flag-dropdown-img.flag-per:before {
+  background-position: -48px -264px;
+}
+
+.flag-dropdown-img.flag-deu:before {
+  background-position: -144px -96px;
+}
+
+.flag-dropdown-img.flag-fin:before {
+  background-position: -72px -120px;
+}
+
+.flag-dropdown-img.flag-nor:before {
+  background-position: -288px -240px;
+}
+
+.flag-dropdown-img.flag-can:before {
+  background-position: -96px -72px;
+}
+
+.flag-dropdown-img.flag-nzl:before {
+  background-position: -384px -240px;
+}
+
+.flag-dropdown-img.flag-irl:before {
+  background-position: -384px -144px;
+}
+
+.flag-dropdown-img.flag-alb:before {
+  background-position: -168px -24px;
+}
+
+.flag-dropdown-img.flag-and:before {
+  background-position: -48px -24px;
+}
+
+.flag-dropdown-img.flag-atg:before {
+  background-position: -120px -24px;
+}
+
+.flag-dropdown-img.flag-arg:before {
+  background-position: -288px -24px;
+}
+
+.flag-dropdown-img.flag-arm:before {
+  background-position: -192px -24px;
+}
+
+.flag-dropdown-img.flag-aut:before {
+  background-position: -336px -24px;
+}
+
+.flag-dropdown-img.flag-aze:before {
+  background-position: -24px -48px;
+}
+
+.flag-dropdown-img.flag-bhs:before {
+  background-position: -384px -48px;
+}
+
+.flag-dropdown-img.flag-bgd:before {
+  background-position: -96px -48px;
+}
+
+.flag-dropdown-img.flag-brb:before {
+  background-position: -72px -48px;
+}
+
+.flag-dropdown-img.flag-blz:before {
+  background-position: -72px -72px;
+}
+
+.flag-dropdown-img.flag-btn:before {
+  background-position: 0 -72px;
+}
+
+.flag-dropdown-img.flag-bol:before {
+  background-position: -336px -48px;
+}
+
+.flag-dropdown-img.flag-bwa:before {
+  background-position: -24px -72px;
+}
+
+.flag-dropdown-img.flag-bra:before {
+  background-position: -360px -48px;
+}
+
+.flag-dropdown-img.flag-brn:before {
+  background-position: -312px -48px;
+}
+
+.flag-dropdown-img.flag-bfa:before {
+  background-position: -144px -48px;
+}
+
+.flag-dropdown-img.flag-cmr:before {
+  background-position: -312px -72px;
+}
+
+.flag-dropdown-img.flag-tcd:before {
+  background-position: -168px -312px;
+}
+
+.flag-dropdown-img.flag-chl:before {
+  background-position: -288px -72px;
+}
+
+.flag-dropdown-img.flag-col:before {
+  background-position: -360px -72px;
+}
+
+.flag-dropdown-img.flag-cog:before {
+  background-position: -192px -72px;
+}
+
+.flag-dropdown-img.flag-cok:before {
+  background-position: -264px -72px;
+}
+
+.flag-dropdown-img.flag-cri:before {
+  background-position: -384px -72px;
+}
+
+.flag-dropdown-img.flag-cub:before {
+  background-position: 0 -96px;
+}
+
+.flag-dropdown-img.flag-dji:before {
+  background-position: -168px -96px;
+}
+
+.flag-dropdown-img.flag-dma:before {
+  background-position: -216px -96px;
+}
+
+.flag-dropdown-img.flag-dom:before {
+  background-position: -240px -96px;
+}
+
+.flag-dropdown-img.flag-ecu:before {
+  background-position: -288px -96px;
+}
+
+.flag-dropdown-img.flag-slv:before {
+  background-position: -72px -312px;
+}
+
+.flag-dropdown-img.flag-gnq:before {
+  background-position: -48px -144px;
+}
+
+.flag-dropdown-img.flag-flk:before {
+  background-position: -120px -120px;
+}
+
+.flag-dropdown-img.flag-fji:before {
+  background-position: -96px -120px;
+}
+
+.flag-dropdown-img.flag-gab:before {
+  background-position: -216px -120px;
+}
+
+.flag-dropdown-img.flag-gmb:before {
+  background-position: 0 -144px;
+}
+
+.flag-dropdown-img.flag-geo:before {
+  background-position: -288px -120px;
+}
+
+.flag-dropdown-img.flag-gha:before {
+  background-position: -336px -120px;
+}
+
+.flag-dropdown-img.flag-grd:before {
+  background-position: -264px -120px;
+}
+
+.flag-dropdown-img.flag-gtm:before {
+  background-position: -120px -144px;
+}
+
+.flag-dropdown-img.flag-guy:before {
+  background-position: -192px -144px;
+}
+
+.flag-dropdown-img.flag-hnd:before {
+  background-position: -240px -144px;
+}
+
+.flag-dropdown-img.flag-isl:before {
+  background-position: -120px -168px;
+}
+
+.flag-dropdown-img.flag-ind:before {
+  background-position: -48px -168px;
+}
+
+.flag-dropdown-img.flag-jam:before {
+  background-position: -192px -168px;
+}
+
+.flag-dropdown-img.flag-jpn:before {
+  background-position: -240px -168px;
+}
+
+.flag-dropdown-img.flag-kir:before {
+  background-position: -336px -168px;
+}
+
+.flag-dropdown-img.flag-kor:before {
+  background-position: -24px -192px;
+}
+
+.flag-dropdown-img.flag-kgz:before {
+  background-position: -288px -168px;
+}
+
+.flag-dropdown-img.flag-lso:before {
+  background-position: -264px -192px;
+}
+
+.flag-dropdown-img.flag-lie:before {
+  background-position: -192px -192px;
+}
+
+.flag-dropdown-img.flag-lux:before {
+  background-position: -312px -192px;
+}
+
+.flag-dropdown-img.flag-mac:before {
+  background-position: -240px -216px;
+}
+
+.flag-dropdown-img.flag-mdg:before {
+  background-position: -96px -216px;
+}
+
+.flag-dropdown-img.flag-mwi:before {
+  background-position: -24px -240px;
+}
+
+.flag-dropdown-img.flag-mlt:before {
+  background-position: -360px -216px;
+}
+
+.flag-dropdown-img.flag-mrt:before {
+  background-position: -312px -216px;
+}
+
+.flag-dropdown-img.flag-mus:before {
+  background-position: -384px -216px;
+}
+
+.flag-dropdown-img.flag-mex:before {
+  background-position: -48px -240px;
+}
+
+.flag-dropdown-img.flag-fsm:before {
+  background-position: -144px -120px;
+}
+
+.flag-dropdown-img.flag-mco:before {
+  background-position: 0 -216px;
+}
+
+.flag-dropdown-img.flag-mar:before {
+  background-position: -384px -192px;
+}
+
+.flag-dropdown-img.flag-nam:before {
+  background-position: -120px -240px;
+}
+
+.flag-dropdown-img.flag-nru:before {
+  background-position: -336px -240px;
+}
+
+.flag-dropdown-img.flag-npl:before {
+  background-position: -312px -240px;
+}
+
+.flag-dropdown-img.flag-ner:before {
+  background-position: -168px -240px;
+}
+
+.flag-dropdown-img.flag-niu:before {
+  background-position: -360px -240px;
+}
+
+.flag-dropdown-img.flag-mkd:before {
+  background-position: -144px -216px;
+}
+
+.flag-dropdown-img.flag-plw:before {
+  background-position: -336px -264px;
+}
+
+.flag-dropdown-img.flag-pan:before {
+  background-position: -24px -264px;
+}
+
+.flag-dropdown-img.flag-png:before {
+  background-position: -96px -264px;
+}
+
+.flag-dropdown-img.flag-pry:before {
+  background-position: -360px -264px;
+}
+
+.flag-dropdown-img.flag-pol:before {
+  background-position: -216px -264px;
+}
+
+.flag-dropdown-img.flag-rwa:before {
+  background-position: -72px -288px;
+}
+
+.flag-dropdown-img.flag-kna:before {
+  background-position: -384px -168px;
+}
+
+.flag-dropdown-img.flag-lca:before {
+  background-position: -168px -192px;
+}
+
+.flag-dropdown-img.flag-stp:before {
+  background-position: -48px -312px;
+}
+
+.flag-dropdown-img.flag-sen:before {
+  background-position: -360px -288px;
+}
+
+.flag-dropdown-img.flag-syc:before {
+  background-position: -144px -288px;
+}
+
+.flag-dropdown-img.flag-slb:before {
+  background-position: -120px -288px;
+}
+
+.flag-dropdown-img.flag-lka:before {
+  background-position: -216px -192px;
+}
+
+.flag-dropdown-img.flag-sur:before {
+  background-position: 0 -312px;
+}
+
+.flag-dropdown-img.flag-swz:before {
+  background-position: -120px -312px;
+}
+
+.flag-dropdown-img.flag-twn:before {
+  background-position: -72px -336px;
+}
+
+.flag-dropdown-img.flag-tjk:before {
+  background-position: -264px -312px;
+}
+
+.flag-dropdown-img.flag-tha:before {
+  background-position: -240px -312px;
+}
+
+.flag-dropdown-img.flag-tls:before {
+  background-position: -312px -312px;
+}
+
+.flag-dropdown-img.flag-tgo:before {
+  background-position: -216px -312px;
+}
+
+.flag-dropdown-img.flag-tkl:before {
+  background-position: -288px -312px;
+}
+
+.flag-dropdown-img.flag-ton:before {
+  background-position: -384px -312px;
+}
+
+.flag-dropdown-img.flag-tto:before {
+  background-position: -24px -336px;
+}
+
+.flag-dropdown-img.flag-tuv:before {
+  background-position: -48px -336px;
+}
+
+.flag-dropdown-img.flag-uga:before {
+  background-position: -144px -336px;
+}
+
+.flag-dropdown-img.flag-ury:before {
+  background-position: -192px -336px;
+}
+
+.flag-dropdown-img.flag-uzb:before {
+  background-position: -216px -336px;
+}
+
+.flag-dropdown-img.flag-vut:before {
+  background-position: -384px -336px;
+}
+
+.flag-dropdown-img.flag-ala:before {
+  background-position: 0 -48px;
+}
