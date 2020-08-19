@@ -11,22 +11,111 @@
 
 </head>
 
-<body>
+<body style="background-color: #1c1d27; color: white;">
+  <style>
+    .example > .flag-dropdown-container {
+      width: 200px;
+
+    }
+    .example .flag-dropdown {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-weight: 400;
+
+    }
+    .example .flag-dropdown-divider {
+      visibility: hidden;
+      border-bottom: solid 1px #515182;
+      margin-left: 0px;
+    }
+    .example .flag-dropdown-caption-label {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .example .flag-dropdown-caption {
+      background-color: #515182;
+      color: white;
+    }
+    .example .flag-dropdown>.flag-dropdown-list {
+      background-color: #8080CC;
+      color: black;
+    }
+    .example .flag-dropdown-item {}
+    .example >.flag-dropdown-item.selected {
+      font-weight: 600;
+    }
+    .example >.flag-dropdown-caption:hover {}
+    .example >.flag-dropdown-item:hover {}
+    .example >.flag-dropdown.open {}
+    .example >.flag-dropdown-img:before {}
+
+    .exmaple2 > .flag-dropdown-container {
+      width: 200px;
+
+    }
+  </style>
+  <style>
+    .example2 > .flag-dropdown-container {
+      width: 200px;
+
+    }
+    .example2 .flag-dropdown {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-weight: 400;
+
+    }
+    .example2 .flag-dropdown-divider {
+      visibility: hidden;
+      border-bottom: solid 1px #515182;
+      margin-left: 0px;
+    }
+    .example2 .flag-dropdown-caption-label {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .example2 .flag-dropdown-caption {
+      background-color: transparent;
+      color: white;
+    }
+    .example2 .flag-dropdown>.flag-dropdown-list {
+      background-color: #515182;
+      color: black;
+    }
+    .example2 .flag-dropdown-item {}
+    .example2 >.flag-dropdown-item.selected {
+      font-weight: 600;
+    }
+    .example2 .flag-dropdown-caption:hover {
+      background-color: #8080CC;
+    }
+    .example2 .flag-dropdown-list > .flag-dropdown-item:hover {
+      background-color: #8080CC;
+    }
+    .example2 >.flag-dropdown.open {}
+    .example2 >.flag-dropdown-img:before {}
+
+    .exmaple2 > .flag-dropdown-container {
+      width: 200px;
+    }
+  </style>
   <br>
-  <ml-flag show-all="false" default="PER" text="Selecciona tu pais" label="Pais" show-text-default="true"></ml-flag>
+  <ml-flag class="example" show-all="false" default="PER" text="Selecciona tu idioma" label="Pais" show-text-default="true"></ml-flag>
   <h1 onclick="bsdFlag.selectItem('PER')">Seleccionar a Peru con un click</h1>
   <h1 onclick="bsdFlag.reset()">reset</h1>
+  <ml-flag id="example2" class="example2" show-all="false" default="PER" text="Selecciona tu pais" label="Pais" show-text-default="true"></ml-flag>
   <script>
     const bsdFlag = document.querySelector('ml-flag');
-    bsdFlag.flags = [{key: 'PER', text: '+51'}, {key: 'COL'}];
-    bsdFlag.addEventListener('clickflag', event => { 
+    bsdFlag.flags = [{key: 'PER', text: '+51'}, {key: 'COL', text: '+154'}, {key: 'FIN', text: '+663'}, {key: 'NOR', text: '(1) 123'}];
+    bsdFlag.addEventListener('clickflag', event => {
       console.log('clickflag', event);
 
       bsdFlag.selectedItem().then((result) => {
-        console.log('metodo publico', result); 
+        console.log('metodo publico', result);
       })
-       
+
     })
+
+    const bsdFlag2 = document.getElementById('example2');
+    bsdFlag2.flags = [{key: 'PER', text: ''}, {key: 'COL', text:'', position: 'flag-fil-3-col-4'}, {key: 'FIN', text: ''}, {key: 'NOR', text: ''}];
   </script>
 </body>
 

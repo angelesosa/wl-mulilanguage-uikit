@@ -5,11 +5,12 @@ interface Flag {
   text: string,
   selected: boolean,
   class: string,
+  position?: string,
 }
 
 @Component({
   tag: 'ml-flag',
-  styleUrl: 'ml-flag.css',
+  styleUrls: ['ml-flag.css', 'ml-flag-position.css'],
   shadow: false,
   assetsDirs: ['assets']
 })
@@ -751,7 +752,7 @@ export class MlFlag implements ComponentInterface {
               {
                 Object.values(this.innerFlags).map((item) =>
                   <div
-                    class={`flag-dropdown-item flag-dropdown-img ${item.class} ${item.selected ? 'selected' : ''}`}
+                    class={`flag-dropdown-item flag-dropdown-img ${item.class} ${item.position} ${item.selected ? 'selected' : ''}`}
                     key={item.key}
                     onClick={() => this.onClickItem(item.key)}
                   >

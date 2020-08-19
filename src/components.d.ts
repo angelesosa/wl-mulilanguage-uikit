@@ -18,6 +18,7 @@ export namespace Components {
             text: string;
             selected: boolean;
             class: string;
+            position?: string;
         }>;
         "showAll": boolean;
         "showTextDefault": boolean;
